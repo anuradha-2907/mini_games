@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      min-height: 110vh;
+      transform: translate(70%, 50%);
+      margin-top: -30%;
+      font-family: Alegreya;
+    }
+
+    div {
+      height: 100px;
+      width: 100px;
+      all: unset;
+      position: relative;
+      background: #1e1e1e;
+      padding: 1em 1.5em;
+      background: black;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      text-transform: uppercase;
+      z-index: 1;
+
+    }
+
+    div::before {
+      content: "";
+      position: absolute;
+      animation: rainbow-border 1.5s linear infinite;
+      border-radius: 4px;
+      background: linear-gradient(70deg, #0ebeff, #ffdd40, #ae63e4, #47cf73, #0ebeff, #ffdd40, #ae63e4, #47cf73);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-size: 200% 200%;
+    }
+
+    div::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      width: auto;
+      z-index: -1;
+      border-radius: 3px;
+      margin: 3px;
+      background: inherit;
+    }
+
+    @keyframes rainbow-border {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+    h1{
+      font-size: 3em;
+    }
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #000;
+      padding: 10px;
+      row-gap: 10px;
+      column-gap: 10px;
+      margin-left: 2em;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+
+    .btn {
+      width: 100px;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      border: none;
+      height: 100px;
+      font-size:1.2em;
+     
+    }
+    a{
+      text-decoration-line: none;
+    }
+hr{
+  border: transparent;
+}
+  </style>
+</head>
+
+<body>
+
+
+  <h1>Select a Game:</h1>
+
+  <div class="grid-container">
+
+    <div class="grid-item"><a href="/Snake/index.html"><button class="btn"><span>🐍</span></button></a></div>
+
+    <div class="grid-item"><a href="/Tic-Tac-Toe/index.html"><buttonclass="btn"><span>❌<hr>⭕</span></button></a></div>
+
+    <div class="grid-item"><a href="/Rock-Paper-Scisscors/index.html"><button class="btn"><span>🗿📃✂</span></button></a></div>
+
+    <div class="grid-item"><a href="/Sanke-Ladder/index.html"><button class="btn"><span>🐍🎲</span></button></a></div>
+
+    <div class="grid-item"><a href="/Coin-Game/index.html"><button class="btn"><span>💰</span></button></a></div>
+
+    <div class="grid-item"><a href="/Guessing-Game/index.html"><button class="btn"><span>🔢</span></button></a></div>
+
+    <div class="grid-item"><a href="/Matching/index.html"><button class="btn"><span>Ⓜ️🅰</span></button></a></div>
+
+    <div class="grid-item"><a href="/Space-Invadors/index.html"><button class="btn"><span></span>👽🚀👾</button></a></div>
+
+    <div class="grid-item"><a href="/Infinite-Run/index.html"><button class="btn"><span>🏃🏻‍♂️♾️</span></button></a></div>
+  </div>
+</body>
+
+</html>
